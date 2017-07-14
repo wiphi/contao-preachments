@@ -1,0 +1,31 @@
+
+<div class="preachment <?php echo $this->class ?> block"<?php echo $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+
+  <h2><?= $this->title ?></h2>
+  <div class="preachment_details">
+    <p><?= $this->speaker ?></p>
+    <p><?= $this->dateFormated ?></p>
+    <div class="preachment_file">
+      <?php if ($this->file->extension == 'pdf'): ?>
+        <div class="file_document embed-responsive embed-responsive-4by3">
+          <embed src="<?= $this->file->path; ?>"
+            class="embed-responsive-item"            
+            alt="<?= $this->title ?>" 
+            pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+        </div>
+      <?php else: ?>
+        <div class="file_audio">
+          <audio controls="controls" preload="none">
+              <source src="<?= $this->file->path; ?>" 
+                type="audio/<?= $this->file->extension; ?>" />
+          </audio>
+        </div>
+      <?php endif; ?>
+    </div>
+    <?php if($this->description) : ?>
+      <div class="description">
+        <?= $this->description ?>
+      </div>
+    <?php endif; ?>
+  </div>
+</div>
