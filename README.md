@@ -17,8 +17,10 @@ Derzeit ist das Modul noch nicht unter dem Package-Manager auffindbar, kann aber
     ],
 </pre>
 
+## Showcase
+
+Das Modul kann im Frontend auf https://www.evgemeinde-badelster.de/predigten angesehen werden.
+
 ## Hinweise
 
 Derzeit ist das Modul nur unter Contao 3.5 lauffähig. Eine Anpassung auf Version 4 ist in Planung.
-
-##
