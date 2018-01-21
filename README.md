@@ -6,16 +6,7 @@ Derzeit kann zu einer Predigt in Form einer PDF- oder eine mp3-Datei hinterlegt 
 
 ## Installation
 
-Derzeit ist das Modul noch nicht unter dem Package-Manager auffindbar, kann aber durch einen manuellen Eintrag in die composer.json installiert werden.
-
-<pre>
-    "repositories": [
-        {
-            "url": "https://github.com/wiphi/contao-preachments.git",
-            "type": "git"
-        }
-    ],
-</pre>
+Die Installation kann mittels Contao Paketverwaltung durchgeführt werden.
 
 ## Showcase
 
