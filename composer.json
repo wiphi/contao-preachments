@@ -4,7 +4,7 @@
 	"keywords":["contao","module","preachments"],
 	"type":"contao-module",
 	"homepage":"https://github.com/wiphi/contao-preachments",
-	"license":"MIT License",
+	"license":"MIT",
 	"authors":[
 		{
 			"name":"Philipp Winkel",
