@@ -127,11 +127,14 @@ class ModulePreachmentList extends \Preachments
 			}
 
 			// PW: Info über letztes Event im Monat
-			$arrPrechments[$iPreachment]['lastEventThisMonth'] = false;
+			$arrPrechments[$iPreachment]['lastPreachmentThisMonth'] = false;
+			$arrPrechments[$iPreachment]['lastPreachmentThisDay'] = false;
 			if ($iPreachment < $limit)
 			{
 				if ($arrPrechments[$iPreachment]['month'] != $arrPrechments[$iPreachment + 1]['month'])
 					$arrPrechments[$iPreachment]['lastPreachmentThisMonth'] = true;
+				if ($arrPrechments[$iPreachment]['date'] != $arrPrechments[$iPreachment + 1]['date'])
+					$arrPrechments[$iPreachment]['lastPreachmentThisDay'] = true;
 			}
 
 
@@ -141,8 +144,10 @@ class ModulePreachmentList extends \Preachments
 			$preachment['sonntag'] = '';
 			// PW: CSS Klasse für verschiedene Tage
 			$preachment['dayPattern'] = ($preachment['dayPattern'] ? 'oddday' : 'evenday');
-			// PW: CSS Klasse für letztes Event im Monat
+			// PW: CSS Klasse für letzte Predigt im Monat
 			$preachment['lastPreachmentThisMonth'] = ($preachment['lastPreachmentThisMonth'] ? 'lastPreachmentThisMonth' : '');
+			// PW: CSS Klasse für letzte Predigt im Monat
+			$preachment['lastPreachmentThisDay'] = ($preachment['lastPreachmentThisDay'] ? 'lastPreachmentThisDay' : '');
 			// Tag im Kirchenjahr
 			if (class_exists('\Losungen\LosungenModel'))
 			{			
