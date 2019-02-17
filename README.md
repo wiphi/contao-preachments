@@ -14,4 +14,4 @@ Das Modul kann im Frontend auf https://www.evgemeinde-badelster.de/predigten ang
 
 ## Hinweise
 
-Derzeit ist das Modul nur unter Contao 3.5 lauffähig. Eine Anpassung auf Version 4 ist in Planung.
+Das Modul ist für Contao 3.5 und Contao 4 freigegeben.
