@@ -153,6 +153,10 @@ class ModulePreachmentList extends \Preachments
 			{			
 				$preachment['sonntag'] = \Losungen\LosungenModel::findOneByDatum($preachment['date'])->sonntag;
 			}
+			else if (class_exists('\WiPhi\DieLosungen\LosungenModel'))
+			{			
+				$preachment['sonntag'] = \WiPhi\DieLosungen\LosungenModel::findOneByDatum($preachment['date'])->sonntag;
+			}
 
 			// Month header
 			$preachment['newMonth'] = false;
