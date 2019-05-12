@@ -221,7 +221,7 @@ $GLOBALS['TL_DCA']['tl_preachments'] = array
                 'rgxp' => 'folderalias',
                 'tl_class' => ''
             ),
-            'sql' => "blob NOT NULL"            
+            'sql' => "binary(16) NULL"            
         ),
 		'published' => array
 		(
