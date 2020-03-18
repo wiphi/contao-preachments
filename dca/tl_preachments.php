@@ -198,7 +198,7 @@ $GLOBALS['TL_DCA']['tl_preachments'] = array
             'eval' => array(
                 'mandatory' => false,
                 'unique' => false,
-                'maxlength' => 255,
+                //'maxlength' => 255,
                 'allowHtml' => true,
                 'rte' => 'tinyMCE'
             ),
