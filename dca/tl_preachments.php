@@ -216,8 +216,8 @@ $GLOBALS['TL_DCA']['tl_preachments'] = array
                 'unique' => false,
                 'files' => true,
                 'filesOnly' => true,
-                'fieldType' => 'radio',
-                'extensions' => 'mp3,ogg,wav,wma,pdf', 
+				'fieldType' => 'radio',
+                'extensions' => 'pdf,mp3,ogg,wav,wma,mp4,m4v,mov,wmv,webm,ogv', 
                 'rgxp' => 'folderalias',
                 'tl_class' => ''
             ),

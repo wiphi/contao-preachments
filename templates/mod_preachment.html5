@@ -1,4 +1,4 @@
-
+<!-- pdf,mp3,ogg,wav,wma,mp4,m4v,mov,wmv,webm,ogv -->
 <div class="preachment <?php echo $this->class ?> block"<?php echo $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
 
   <h2><?= $this->title ?></h2>
@@ -13,11 +13,19 @@
             alt="<?= $this->title ?>" 
             pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
         </div>
-      <?php else: ?>
+      <?php endif; ?>
+      
+      <?php if (\in_array($this->file->extension, array('mp4', 'm4v', 'mov', 'wmv', 'webm', 'ogv'))): ?>
+        <video preload="none" width="640" height="360" >
+          <source type="<?= $this->file->mime ?>" src="<?= $this->file->path ?>" title="<?= $this->file->title ?>">
+        </video>      
+      <?php endif; ?>
+
+      <?php if (\in_array($this->file->extension, array('mp3', 'ogg', 'wav', 'wma'))): ?>
         <div class="file_audio">
           <audio controls="controls" preload="none">
               <source src="<?= $this->file->path; ?>" 
-                type="audio/<?= $this->file->extension; ?>" />
+                type="<?= $this->file->mime; ?>" />
           </audio>
         </div>
       <?php endif; ?>
